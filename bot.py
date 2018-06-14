@@ -7,7 +7,7 @@ import time
 
 Client = discord.Client()
 startup_extensions = ["Music"]
-bot = commands.Bot("-")
+bot = commands.Bot("?")
 MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
