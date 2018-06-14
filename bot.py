@@ -1,13 +1,11 @@
 import discord
 from discord.ext.commands import Bot
 from discord.ext import commands
-from discord.voice_client import VoiceClient
 import asyncio
 import time
 
 
 Client = discord.Client()
-startup_extensions = ["Music"]
 bot = commands.Bot("-")
 MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
@@ -16,10 +14,6 @@ bypass_list = ["253417332406222848"]
 @bot.event 
 async def on_ready():
     print("Bot is online and connected to Discord") 
-
-class Main_Commands():
-        def __init__(self, bot):
-         self.bot = bot
          
 @bot.event
 async def on_message(message):
@@ -32,13 +26,7 @@ async def on_message(message):
                     await bot.send_message(message.channel, "**Hey!** Don't use that fucking word!!!")
                 except discord.errors.NotFound:
                     return
-    if __name__ == "__main__":
-        for extension in startup_extensions:
-            try:
-                bot.load_extension(extension)
-            except Exception as e:
-                exc = "{}: {}".format(type(e).__name__, e)
-                print('Failed to load extension {}\n{}'.format(extension, exc))
+
     if message.content == "ur shit":
         await bot.send_message(message.channel, ":poop:")
     if message.content == "fuck you":
@@ -81,4 +69,6 @@ async def on_message(message):
     
 
 bot.run("NDU2MDQ0NTUwMTM4NDk1MDA3.DgE4vQ.utuV-7gvVgs6W5bU4fhZRVwLpVw") 
+
+
 
