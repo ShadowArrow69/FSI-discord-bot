@@ -3,23 +3,14 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
 import time
-import json
-import logging
-
 
 Client = discord.Client()
 bot = commands.Bot("-")
 MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
-rlog = logging.getLogger()
-rlog.setLevel(logging.INFO)
-handler = logging.FileHandler('panda.log', encoding='utf-8')
-handler.setFormatter(logging.Formatter('{asctime}:{levelname}:{name}:{message}', style='{'))
-rlog.addHandler(handler)
 
-with open('conf.json') as fp:
-    conf = json.load(fp)
+
 
 bot = commands.Bot(commands.when_mentioned_or(conf['-']), description='william is gay.')
 bot.load_extension('music')
