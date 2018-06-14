@@ -1,2 +1,5 @@
 discord
 asyncio
+youtube_dl>=2016.12.12
+discord.py[voice]>=0.16.8
+pyyaml>=3.12
