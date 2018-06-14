@@ -10,21 +10,6 @@ MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 
-
-
-bot = commands.Bot(commands.when_mentioned_or(conf['-']), description='william is gay.')
-bot.load_extension('music')
-
-@bot.command()
-@commands.has_permissions(manage_guild=True)
-async def reload(ctx):
-    """Reloads the music module.
-    This command requires the Manage Server permission.
-    """
-    ctx.bot.unload_extension('music')
-    ctx.bot.load_extension('music')
-    await ctx.message.add_reaction('\N{WHITE HEAVY CHECK MARK}')
-
 @bot.event 
 async def on_ready():
     print("Bot is online and connected to Discord") 
