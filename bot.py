@@ -28,7 +28,7 @@ async def on_message(message):
                     return
 
     if message.content == "ur shit":
-        await bot.send_message(message.channel, ":joy:")
+        await bot.send_message(message.channel, ":poop:")
     if message.content == "fuck you":
         await bot.send_message(message.channel, ":middle_finger:")
     if message.content == "ur gay":
