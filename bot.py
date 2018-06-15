@@ -25,10 +25,7 @@ async def on_message(message):
                     await bot.send_message(message.channel, "**Hey!** Don't use that fucking word!!!")
                 except discord.errors.NotFound:
                     return
- async def add(ctx, a: int, b: int):
-    await ctx.send(a+b)
- async def multiply(ctx, a: int, b: int):
-    await ctx.send(a*b)
+
     if message.content == "ur shit":
         await bot.send_message(message.channel, ":poop:")
     if message.content == "fuck you":
@@ -67,5 +64,13 @@ async def on_message(message):
         game = message.content[6:]
         await bot.change_presence(game=discord.Game(name=game))
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
+        
+@bot.command()
+async def add(ctx, a: int, b: int):
+    await ctx.send(a+b)
+
+@bot.command()
+async def multiply(ctx, a: int, b: int):
+    await ctx.send(a*b)
 
 bot.run("NDU2MDQ0NTUwMTM4NDk1MDA3.DgUlqA.E81s75QsaEhmfbiHKAytwEXkbu0") 
