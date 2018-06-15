@@ -5,7 +5,7 @@ import asyncio
 import time
 
 Client = discord.Client()
-bot = commands.Bot("?")
+bot = commands.Bot(command_prefix='$')
 MyID = "253417332406222848" 
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
@@ -64,9 +64,17 @@ async def on_message(message):
         game = message.content[6:]
         await bot.change_presence(game=discord.Game(name=game))
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
+@bot.command()
 async def add(ctx, a: int, b: int):
     await ctx.send(a+b)
+
+@bot.command()
 async def multiply(ctx, a: int, b: int):
     await ctx.send(a*b)
+    
+@bot.command()
+async def cat(ctx):
+    await ctx.send("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
+
 
 bot.run("NDU2MDQ0NTUwMTM4NDk1MDA3.DgUlqA.E81s75QsaEhmfbiHKAytwEXkbu0") 
