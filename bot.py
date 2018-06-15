@@ -83,4 +83,4 @@ async def on_message(message):
         with open(self.configPath, "r") as config:
             self.cfg = yaml.load(config)
 
-bot.run("token") 
+bot.run("NDU2MDQ0NTUwMTM4NDk1MDA3.DgUO3Q.Qh0qBu4iHZG_ZNWfpN63uCCvuD4") 
