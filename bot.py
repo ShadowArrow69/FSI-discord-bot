@@ -6,16 +6,18 @@ import asyncio
 import time
 import yaml
 
+with open("example.yaml", 'r') as stream: 
+    try: 
+        print(yaml.load(stream)) 
+    except yaml.YAMLError as exc: 
+        print(exc)
+
 Client = discord.Client()
 startup_extensions = ["Music"]
 bot = commands.Bot("?")
 MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
-Reconnect = False
-with open("config.yml", "r") as file:
-    cfg = yaml.load(file)
-    Reconnect = cfg['AutoReconnect']
 
 @bot.event 
 async def on_ready():
@@ -78,9 +80,5 @@ async def on_message(message):
         game = message.content[6:]
         await bot.change_presence(game=discord.Game(name=game))
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
-
-    self.configPath = "config.yml"
-        with open(self.configPath, "r") as config:
-            self.cfg = yaml.load(config)
 
 bot.run("token") 
