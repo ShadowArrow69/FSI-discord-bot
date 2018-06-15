@@ -4,13 +4,6 @@ from discord.ext import commands
 from discord.voice_client import VoiceClient
 import asyncio
 import time
-import yaml
-
-with open("config.yaml", 'r') as stream: 
-    try: 
-        print(yaml.load(stream)) 
-    except yaml.YAMLError as exc: 
-        print(exc)
 
 Client = discord.Client()
 startup_extensions = ["Music"]
@@ -81,4 +74,4 @@ async def on_message(message):
         await bot.change_presence(game=discord.Game(name=game))
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
 
-bot.run("token") 
+bot.run("NDU2MDQ0NTUwMTM4NDk1MDA3.DgUO3Q.Qh0qBu4iHZG_ZNWfpN63uCCvuD4") 
