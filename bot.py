@@ -13,7 +13,7 @@ MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 Reconnect = False
-with open("config.yaml", "r") as file:
+with open("config.yml", "r") as file:
     cfg = yaml.load(file)
     Reconnect = cfg['AutoReconnect']
 
@@ -79,6 +79,8 @@ async def on_message(message):
         await bot.change_presence(game=discord.Game(name=game))
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
 
-    
+    self.configPath = "config.yml"
+        with open(self.configPath, "r") as config:
+            self.cfg = yaml.load(config)
 
-bot.run("token") 
+bot.run("NDU2MDQ0NTUwMTM4NDk1MDA3.DgUIFw.EuCFOSVdqmjNg9C6cuCCEb0HFu4") 
