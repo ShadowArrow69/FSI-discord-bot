@@ -65,16 +65,5 @@ async def on_message(message):
         await bot.change_presence(game=discord.Game(name=game))
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
 
-async def add(ctx, a: int, b: int):
-    await bot.send(a+b)
-
-
-async def multiply(ctx, a: int, b: int):
-    await bot.send(a*b)
-    
-
-async def cat(bot):
-    await bot.send("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
-
 
 bot.run("NDU2MDQ0NTUwMTM4NDk1MDA3.DgUlqA.E81s75QsaEhmfbiHKAytwEXkbu0") 
