@@ -6,7 +6,7 @@ import asyncio
 import time
 import yaml
 
-with open("example.yaml", 'r') as stream: 
+with open("config.yaml", 'r') as stream: 
     try: 
         print(yaml.load(stream)) 
     except yaml.YAMLError as exc: 
