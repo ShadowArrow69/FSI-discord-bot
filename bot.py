@@ -4,6 +4,7 @@ from discord.ext import commands
 from discord.voice_client import VoiceClient
 import asyncio
 import time
+import yaml
 
 Client = discord.Client()
 startup_extensions = ["Music"]
@@ -11,6 +12,10 @@ bot = commands.Bot("?")
 MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
+Reconnect = False
+with open("config.yml", "r") as file:
+    cfg = yaml.load(file)
+    Reconnect = cfg['AutoReconnect']
 
 @bot.event 
 async def on_ready():
@@ -76,4 +81,4 @@ async def on_message(message):
 
     
 
-bot.run("bot token here") 
+bot.run("token") 
