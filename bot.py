@@ -13,7 +13,7 @@ MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 Reconnect = False
-with open("config.yml", "r") as file:
+with open("config.yaml", "r") as file:
     cfg = yaml.load(file)
     Reconnect = cfg['AutoReconnect']
 
