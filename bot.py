@@ -66,4 +66,4 @@ async def on_message(message):
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
 
 
-bot.run("NDU2MDQ0NTUwMTM4NDk1MDA3.DgUlqA.E81s75QsaEhmfbiHKAytwEXkbu0") 
+bot.run("NDU2MDQ0NTUwMTM4NDk1MDA3.DgXNag.9P1Vmk-7icQVmzxBMmV8xPfGkoY") 
