@@ -8,8 +8,7 @@ import time
 Client = discord.Client()
 startup_extensions = ["Music"]
 bot = commands.Bot("?")
-MyID = "253417332406222848"
-ahmed = NDU2MDQ0NTUwMTM4NDk1MDA3.DgUO3Q.Qh0qBu4iHZG_ZNWfpN63uCCvuD4 
+MyID = "253417332406222848" 
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 
@@ -75,4 +74,4 @@ async def on_message(message):
         await bot.change_presence(game=discord.Game(name=game))
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
 
-bot.run("ahmed") 
+bot.run("NDU2MDQ0NTUwMTM4NDk1MDA3.DgUO3Q.Qh0qBu4iHZG_ZNWfpN63uCCvuD4") 
