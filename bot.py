@@ -9,12 +9,9 @@ MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 
-def to_upper(argument):
-    return argument.upper()
-
 @bot.command()
-async def up(ctx, *, content: to_upper):
-    await ctx.send(content)
+async def foo(ctx, arg):
+    await ctx.send(arg)
     
 @bot.command()
 async def echo(*, message: str):
