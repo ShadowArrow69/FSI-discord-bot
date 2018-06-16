@@ -3,6 +3,7 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
 import time
+import random
 
 Client = discord.Client()
 bot = commands.Bot(command_prefix='$')
@@ -10,9 +11,14 @@ MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 
+class Slapper(commands.Converter):
+    async def convert(self, ctx, argument):
+        to_slap = random.choice(ctx.guild.members)
+        return '{0.author} slapped {1} because *{2}*'.format(ctx, to_slap, argument)
+
 @bot.command()
-async def add(ctx, a: int, b: int):
-    await ctx.send(a + b)
+async def slap(ctx, *, reason: Slapper):
+    await ctx.send(reason)
 
 @bot.event 
 async def on_ready():
