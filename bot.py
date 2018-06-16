@@ -70,5 +70,6 @@ async def on_message(message):
         await bot.change_presence(game=discord.Game(name=game))
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
 
-
+    await bot.process_commands(message)
+        
 bot.run("NDU3MzEzMDUwODQ5MDUwNjM3.DgXRgg.D-pjEkgc0Mx4Q4orZsquQ3CTBfQ") 
