@@ -10,7 +10,7 @@ chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 
 
-@bot.command()
+@bot.commands()
 async def add(ctx, a: int, b: int):
     await ctx.send(a+b)
     
