@@ -18,9 +18,7 @@ async def ping(ctx):
 @bot.event 
 async def on_ready():
     print("Bot is online and connected to Discord") 
-     
-    await bot.process_commands(message)
-    
+        
 @bot.event
 async def on_message(message):
     contents = message.content.split(" ")
