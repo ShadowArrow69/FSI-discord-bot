@@ -5,11 +5,15 @@ import asyncio
 import time
 import random
 
-Client = discord.Client()
 bot = commands.Bot(command_prefix='$')
+Client = discord.Client()
 MyID = "253417332406222848" 
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
+
+@bot.comand(pass_context=True)
+async def ping(ctx):
+    await bot.say(":ping_pong: Pong!")
 
 @bot.event 
 async def on_ready():
