@@ -3,6 +3,7 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
 import time
+import random
 
 bot = commands.Bot(command_prefix='!')
 MyID = "253417332406222848" 
@@ -20,15 +21,18 @@ async def on_ready():
 async def add(left : int, right : int): 
     await bot.say(left + right)
       
-@bot.command() 
+@bot.command()
 async def roll(dice : str):
-   try: rolls, limit = map(int, dice.split('d')) 
-      except Exception: 
-         await bot.say('Wrong format! We only accept NDN') 
-         return
-result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
+    """Rolls a dice in NdN format."""
+    try:
+        rolls, limit = map(int, dice.split('d'))
+    except Exception:
+        await bot.say('Format has to be in NdN!')
+        return
+
+    result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
     await bot.say(result)
-      
+   
 @bot.command()
 async def echo(*, message: str):
     await bot.say(message)   
