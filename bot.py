@@ -9,10 +9,17 @@ MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 
+def to_upper(argument):
+    return argument.upper()
+
 @bot.command()
-async def add(ctx, a: int, b: int):
-    await ctx.send(a + b)
- 
+async def up(ctx, *, content: to_upper):
+    await ctx.send(content)
+    
+@bot.command()
+async def echo(*, message: str):
+    await bot.say(message)
+    
 @bot.event 
 async def on_ready():
     print("Bot is online and connected to Discord") 
