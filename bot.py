@@ -9,6 +9,11 @@ MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 
+
+@bot.command()
+async def add(ctx, a: int, b: int):
+    await ctx.send(a+b)
+    
 @bot.event 
 async def on_ready():
     print("Bot is online and connected to Discord") 
@@ -64,10 +69,6 @@ async def on_message(message):
         game = message.content[6:]
         await bot.change_presence(game=discord.Game(name=game))
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
-
-@bot.command()
-async def add(ctx, a: int, b: int):
-    await ctx.send(a+b)
 
         
 bot.run("NDU3MzEzMDUwODQ5MDUwNjM3.DgZxtA.iRkn1R1ixHHeTeKVzLe2GVf8UbY") 
