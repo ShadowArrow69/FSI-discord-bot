@@ -10,10 +10,6 @@ MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 
-@bot.comand(pass_context=True)
-async def ping(ctx):
-    await bot.say(":ping_pong: Pong!")
-
 @bot.event 
 async def on_ready():
     print("Bot is online and connected to Discord") 
