@@ -4,7 +4,6 @@ from discord.ext import commands
 import asyncio
 import time
 
-Client = discord.Client()
 bot = commands.Bot(command_prefix='$')
 MyID = "253417332406222848" 
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
@@ -13,6 +12,8 @@ bypass_list = ["253417332406222848"]
 @bot.event 
 async def on_ready():
     print("Bot is online and connected to Discord") 
+    
+    await bot.process_commands(message)
         
 @bot.event
 async def on_message(message):
@@ -69,18 +70,5 @@ async def on_message(message):
 async def add(ctx, a: int, b: int):
     await ctx.send(a+b)
 
-@bot.command()
-async def multiply(ctx, a: int, b: int):
-    await ctx.send(a*b)
-
-@bot.command()
-async def greet(ctx):
-    await ctx.send(":smiley: :wave: Hello, there!")
-
-@bot.cmmands()
-async def cat(ctx):
-    await ctx.send("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
-        
-   await bot.process_commands(message)
         
 bot.run("NDU3MzEzMDUwODQ5MDUwNjM3.DgZxtA.iRkn1R1ixHHeTeKVzLe2GVf8UbY") 
