@@ -13,6 +13,22 @@ bypass_list = ["253417332406222848"]
 async def echo(*, message: str):
     await bot.say(message)
     
+@bot.command()
+async def add(ctx, a: int, b: int):
+    await ctx.send(a+b)
+
+@bot.command()
+async def multiply(ctx, a: int, b: int):
+    await ctx.send(a*b)
+
+@bot.command()
+async def greet(ctx):
+    await ctx.send(":smiley: :wave: Hi bitch!")
+
+@bot.cmmands()
+async def cat(ctx):
+    await ctx.send("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
+    
 @bot.event 
 async def on_ready():
     print("Bot is online and connected to Discord") 
