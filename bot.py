@@ -8,19 +8,22 @@ bot = commands.Bot(command_prefix='!')
 MyID = "253417332406222848" 
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
-
+   
+@bot.event
+async def on_ready():
+    print('Logged in as')
+    print(bot.user.name)
+    print(bot.user.id)
+    print('------')
+    
 @bot.command()
-async def foo(ctx, arg):
-    await ctx.send(arg)
-
+async def add(ctx, a: int, b: int):
+    await ctx.send(a+b)
+    
 @bot.command()
 async def echo(*, message: str):
-    await bot.say(message)
+    await bot.say(message)   
     
-@bot.event 
-async def on_ready():
-    print("Bot is online and connected to Discord") 
-        
 @bot.event
 async def on_message(message):
     contents = message.content.split(" ")
