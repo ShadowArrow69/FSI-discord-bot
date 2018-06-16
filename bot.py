@@ -9,9 +9,6 @@ MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 
-@bot.command(pass_context=True)
-async def foo(ctx, arg):
-    await ctx.send(arg)
     
 @bot.command()
 async def echo(*, message: str):
