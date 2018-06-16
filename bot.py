@@ -12,8 +12,6 @@ bypass_list = ["253417332406222848"]
 @bot.command()
 async def echo(*, message: str):
     await bot.say(message)
-    
-@bot.command()
 async def add(ctx, a: int, b: int):
     await ctx.send(a+b)
  
