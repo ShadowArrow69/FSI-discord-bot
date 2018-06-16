@@ -12,8 +12,6 @@ bypass_list = ["253417332406222848"]
 @bot.event 
 async def on_ready():
     print("Bot is online and connected to Discord") 
-    
-    await bot.process_commands(message)
         
 @bot.event
 async def on_message(message):
@@ -26,6 +24,7 @@ async def on_message(message):
                     await bot.send_message(message.channel, "**Hey!** Don't use that fucking word!!!")
                 except discord.errors.NotFound:
                     return
+    await bot.process_commands(message)
 
     if message.content == "ur shit":
         await bot.send_message(message.channel, ":poop:")
