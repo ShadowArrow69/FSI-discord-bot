@@ -18,9 +18,17 @@ async def on_ready():
    
 @bot.command()
 async def add(left : int, right : int): 
-   """Quick Maths""" 
-   await bot.say(left + right)
-    
+    await bot.say(left + right)
+      
+@bot.command() 
+async def roll(dice : str):
+   try: rolls, limit = map(int, dice.split('d')) 
+      except Exception: 
+         await bot.say('Wrong format! We only accept NDN') 
+         return
+result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
+    await bot.say(result)
+      
 @bot.command()
 async def echo(*, message: str):
     await bot.say(message)   
