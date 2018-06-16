@@ -3,10 +3,9 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
 import time
-import random
 
-bot = commands.Bot(command_prefix='$')
 Client = discord.Client()
+bot = commands.Bot(command_prefix='$')
 MyID = "253417332406222848" 
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
