@@ -9,10 +9,9 @@ MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 
-
-@bot.commands()
-async def add(ctx, a: int, b: int):
-    await ctx.send(a+b)
+@bot.command()
+async def echo(*, message: str):
+    await bot.say(message)
     
 @bot.event 
 async def on_ready():
@@ -29,6 +28,7 @@ async def on_message(message):
                     await bot.send_message(message.channel, "**Hey!** Don't use that fucking word!!!")
                 except discord.errors.NotFound:
                     return
+                
     await bot.process_commands(message)
 
     if message.content == "ur shit":
