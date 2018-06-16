@@ -4,7 +4,7 @@ from discord.ext import commands
 import asyncio
 import time
 
-bot = commands.Bot(command_prefix='$')
+bot = commands.Bot(command_prefix='!')
 MyID = "253417332406222848" 
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
