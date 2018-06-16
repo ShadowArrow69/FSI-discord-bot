@@ -15,7 +15,11 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('------')
-    
+
+@bot.command()
+async def greet(ctx):
+    await ctx.send(":smiley: :wave: Hi bitch!")   
+   
 @bot.command()
 async def add(ctx, a: int, b: int):
     await ctx.send(a+b)
