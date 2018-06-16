@@ -10,6 +10,10 @@ MyID = "253417332406222848"
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
 bypass_list = ["253417332406222848"]
 
+@bot.command()
+async def add(ctx, a: int, b: int):
+    await ctx.send(a + b)
+
 @bot.event 
 async def on_ready():
     print("Bot is online and connected to Discord") 
