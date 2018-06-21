@@ -84,4 +84,4 @@ async def on_message(message):
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
 
         
-bot.run("TOKEN") 
+bot.run("token") 
