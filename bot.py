@@ -84,4 +84,6 @@ async def on_message(message):
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
 
         
-bot.run("token") 
+ if __name__ == '__main__':
+    import config
+    bot.run(config.token)
