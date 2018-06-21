@@ -25,6 +25,10 @@ async def add(left : int, right : int):
 async def cat(ctx):
     await bot.say("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
    
+@bot.command(pass_context=True)
+async def dog(ctx):
+    await bot.say("https://giphy.com/gifs/cheezburger-JfDNFU1qOZna")
+      
 @bot.command()
 async def echo(*, message: str):
     await bot.say(message)   
