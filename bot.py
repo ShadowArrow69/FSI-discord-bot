@@ -8,7 +8,7 @@ import random
 bot = commands.Bot(command_prefix='-')
 MyID = "253417332406222848" 
 chat_filter = ["NIGGA", "HENRY", "FUCK"]
-bypass_list = []
+bypass_list = ["253417332406222848"]
    
 @bot.event
 async def on_ready():
