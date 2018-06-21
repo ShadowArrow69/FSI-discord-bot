@@ -4,6 +4,7 @@ from discord.ext import commands
 import asyncio
 import time
 import random
+import config
 
 bot = commands.Bot(command_prefix='-')
 MyID = "253417332406222848" 
@@ -83,4 +84,4 @@ async def on_message(message):
         await bot.change_presence(game=discord.Game(name=game))
         await bot.send_message(message.channel, "Status has been changed to 'playing" + game + "'")
 
-bot.run("NDU5MjcxMTYyMzY3NTc0MDE2.DgzyHA.wUbQYrUEjvx1P_WrcCsSaEAvs4k")
+bot.run(config.token)
