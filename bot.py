@@ -23,7 +23,7 @@ async def add(left : int, right : int):
      
 @bot.command(pass_context=True)
 async def cat(ctx):
-    await ctx.send("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
+    await bot.say("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
    
 @bot.command()
 async def echo(*, message: str):
