@@ -12,11 +12,8 @@ bypass_list = ["253417332406222848"]
    
 @bot.event
 async def on_ready():
-    print('Logged in as')
-    print(bot.user.name)
-    print(bot.user.id)
-    print('------')
-   
+    print("bot online")
+      
 @bot.command()
 async def add(left : int, right : int): 
     await bot.say(left + right)
