@@ -21,7 +21,7 @@ async def on_ready():
 async def add(left : int, right : int): 
     await bot.say(left + right)
      
-@bot.command()
+@bot.command(pass_context=True)
 async def cat(ctx):
     await ctx.send("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
    
