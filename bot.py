@@ -72,9 +72,11 @@ async def on_message(message):
     if message.content == "kelvin":
         await bot.send_message(message.channel, ":hear_no_evil:")
     if message.content == "nicolas":
-        await bot.send_message(message.channel, ":pig:")
+        await bot.send_message(message.channel, ":cake:")
     if message.content == "william":
-        await bot.send_message(message.channel, ":baby::skin-tone-5:")     
+        await bot.send_message(message.channel, ":baby::skin-tone-5:")
+     if message.content == "benji":
+        await bot.send_message(message.channel, ":girl::skin-tone-5:")    
     if message.content == "yummy":
         await bot.send_message(message.channel, ":hamburger: :fries: :taco: :ramen: :stew: :bento: :ice_cream: :chocolate_bar: :cookie:")
     if message.content == "allahu akbar":
